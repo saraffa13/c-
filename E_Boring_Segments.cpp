@@ -1,0 +1,15 @@
+if(n<=6)
+    {
+        cout<<15<<endl;
+        return;
+    }
+    if(n<=8)
+    {
+        cout<<20<<endl;
+        return;
+    }
+    if(n<=10)
+    {
+        cout<<25<<endl;
+        return;
+    }

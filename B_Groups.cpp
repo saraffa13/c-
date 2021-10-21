@@ -1,0 +1,71 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define IOS                  \
+    ios::sync_with_stdio(0); \
+    cin.tie(0);              \
+    cout.tie(0);
+
+    
+#define int long long
+#define ld long double
+#define endl '\n'
+#define MOD 1000000007
+const int mod=1e9+7;
+
+#define I =in()
+#define S =sin()
+#define C =chin()
+
+#define rep(i,a,b)        for(int i=a;i<b;i++)
+#define vi                vector<int>
+#define vii               vector<pii>
+#define A               arr(n)
+#define  B               brr(n)
+
+inline int in(){int x;cin >> x;return x;}inline string sin(){string x;cin >> x;return x;}inline char chin(){char x;cin >> x;return x;}inline int In(){int x;cin >> x;return x;}
+int gcd(int a, int b){if (a == 0)return b;return gcd(b % a, a);}
+// =======================================================================================================
+// int factorial(int n ){return (n == 1 || n == 0) ? 1 : factorial(n - 1) * n;}
+// bool isPrime(int n){if (n <= 1)return false;for (int i = 2; i < n; i++)if (n % i == 0)return false;return true;}
+// bool isPalin(string s){string t = s;reverse(s.begin(),s.end());return s==t;}
+// bool isPowOfTwo(int n){int y = log2(n);return (pow(2, y) == n);}
+// bool isPerfectSq(double n){double y = sqrt(n);return abs(y * y - n) < -1000000007;}
+// bool arraySortedOrNot(int arr[], int n){if (n == 0 || n == 1)return true;for (int i = 1; i < n; i++)if (arr[i - 1] > arr[i])return false;return true;}
+// =======================================================================================================
+void solve()
+{
+    int n I;
+   vector<vector<int>>arr(n,vector<int>(5));
+   for(auto &x: arr)for(auto &y:x)y I;
+   for(int i=0;i<5;i++){
+       for(int j=i+1;j<5;j++){
+           int a=0,b=0,c=0;
+           for(int k =0;k<n;k++){
+               if(arr[k][i]==1&&arr[k][j]==1)a++;
+               else if(arr[k][i]==0&&arr[k][j]==1)b++;
+               else if(arr[k][i]==1&&arr[k][j]==0)c++;
+               
+           }
+           if(b>c)swap(c,b);
+           if(a+b+c==n&&b+a>=c){cout<<"YES"<<endl;return;}
+       }
+   }
+   cout<<"NO"<<endl;return;
+    
+}
+
+
+
+signed main(){
+    // IOS;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+    return 0;
+}
+// =======================================================================================================
+
